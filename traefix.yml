@@ -1,3 +1,7 @@
+##This is my adventure experiment with Traefik LB.
+## I chopped out the other services, leaving traefik and the visualizer =).
+##
+
 version: "3.3"
 
 services:
