@@ -1,0 +1,20 @@
+version: "3.3"
+
+services:
+
+  web:
+    image: emilevauge/whoami
+    networks:
+      - cirrus-net
+    deploy:
+      replicas: 2
+      labels:
+        - "traefik.port=80"
+        - "traefik.docker.network=cirrus-net"
+        - "traefik.frontend.rule=Host:whoami.cirrus-net"
+        - "traefik.backend.loadbalancer.sticky=true"
+
+
+networks:
+  cirrus-net:
+    driver: overlay
