@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build('mackoi1937/melray', '--build-arg http_proxy=http://10.144.76.10:8080 --build-arg https_proxy=http://10.144.76.10:8080 .')
+        app = docker.build('mackoi1937/melray')
     }
 
     stage('Test image') {
