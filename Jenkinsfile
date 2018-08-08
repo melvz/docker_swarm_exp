@@ -1,4 +1,4 @@
-properties([[$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', numToKeepStr: '2']]])
+properties([[$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', artifactNumToKeepStr: '10', numToKeepStr: '10']]])
 
 def isMaster = (env.BRANCH_NAME == 'master')
 def version = null
