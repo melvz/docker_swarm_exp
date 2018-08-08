@@ -1,3 +1,9 @@
+properties([[$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', numToKeepStr: '2']]])
+
+def isMaster = (env.BRANCH_NAME == 'master')
+def version = null
+
+
 node {
     def app
 
